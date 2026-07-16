@@ -50,7 +50,7 @@ This site is static — no build step required.
    - `.gitignore`
 4. Commit to `main`
 5. **Settings → Pages →** Deploy from branch `main`, folder `/ (root)`
-6. Live at: `https://YOUR_USERNAME.github.io/art-of-experience/`
+6. Live at: `https://art-of-experience.github.io/tuscany/`
 
 A ready-made zip is also available: `art-of-experience-deploy.zip`
 
@@ -62,7 +62,7 @@ git init
 git add index.html styles.css app.jsx README.md .gitignore
 git commit -m "Add Tuscan experience landing page"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/art-of-experience.git
+git remote add origin https://github.com/art-of-experience/tuscany.git
 git push -u origin main
 ```
 
