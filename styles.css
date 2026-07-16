@@ -740,10 +740,14 @@ section {
     padding-block: clamp(2.75rem, 9vw, 4rem);
   }
 
-  /* Hero: lift the sun above the headline so text stays crisp */
+  /* Hero: stack from top and reserve space for hills + scroll hint */
   .hero {
-    padding-block: 7rem 3rem;
-    min-height: 92svh;
+    justify-content: flex-start;
+    padding-block: clamp(5.5rem, 14vh, 7rem) clamp(7rem, 18vw, 8.5rem);
+    min-height: 100svh;
+  }
+  .hero__content {
+    margin-bottom: 1.5rem;
   }
   .hero__sun {
     top: 8%;
@@ -765,6 +769,31 @@ section {
     gap: 0.5rem;
   }
   .hero__meta .dot {
+    display: none;
+  }
+
+  .scroll-hint {
+    bottom: 1.25rem;
+    gap: 0.45rem;
+  }
+  .scroll-hint .bar {
+    height: 28px;
+  }
+
+  .manifesto {
+    position: relative;
+    z-index: 1;
+    background: var(--cream);
+    padding-top: clamp(4.5rem, 14vw, 6rem);
+  }
+
+  .foot__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .foot__meta-sep {
     display: none;
   }
 

@@ -53,7 +53,8 @@ function useParallax() {
     const reduce = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
-    if (reduce) return;
+    const mobile = window.matchMedia("(max-width: 560px)").matches;
+    if (reduce || mobile) return;
     let raf = 0;
     const onScroll = () => {
       if (raf) return;
@@ -939,7 +940,14 @@ function Footer() {
     <footer className="foot">
       <div className="wrap">
         <p className="foot__mark">The Art of Experience</p>
-        <p className="foot__meta">Under the Tuscan Sun · 16–20 September 2026</p>
+        <p className="foot__meta">
+          <span>Under the Tuscan Sun</span>
+          <span className="foot__meta-sep" aria-hidden="true">
+            {" "}
+            ·{" "}
+          </span>
+          <span>16–20 September 2026</span>
+        </p>
       </div>
     </footer>
   );
